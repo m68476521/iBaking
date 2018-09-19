@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/simple_background">
+
+            <TextView
+                android:id="@+id/recipe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/recipe_name"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="@dimen/title_sizeXXX"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.323"
+                app:layout_constraintStart_toEndOf="@+id/fav_image_view"
+                app:layout_constraintTop_toTopOf="@+id/image_view_background"
+                tools:text="Recipe Card"/>
+
+            <TextView
+                android:id="@+id/recipe_serving"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginStart="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/recipe_name"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="@dimen/title_sizeXX"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.323"
+                app:layout_constraintStart_toEndOf="@+id/fav_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/recipe_name"
+                tools:text="Recipe Quantity"/>
+
+            <ImageView
+                android:id="@+id/fav_image_view"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/image_desc"
+                android:elevation="4dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/image_view_background"/>
+
+            <ImageView
+                android:id="@+id/image_view_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/image_desc"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

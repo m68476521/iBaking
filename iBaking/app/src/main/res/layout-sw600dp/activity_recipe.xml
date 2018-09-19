@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/special_title"
+            layout="@layout/cart_ingredient_title"/>
+
+        <include
+            android:id="@+id/gallery_recycler_view"
+            layout="@layout/main_recycler_view"/>
+
+    </LinearLayout>
+</layout>

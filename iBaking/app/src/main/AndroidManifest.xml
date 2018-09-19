@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.m68476521.mike.baking">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.m68476521.mike.baking.activities.BakingActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.m68476521.mike.baking.activities.RecipeActivity"
+            android:label="@string/title_activity_recipe"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.m68476521.mike.baking.activities.BakingActivity"/>
+        </activity>
+        <activity
+            android:name="com.m68476521.mike.baking.activities.RecipeStepDetail"
+            android:label="@string/title_activity_recipe">
+        </activity>
+        <activity
+            android:name="com.m68476521.mike.baking.activities.IngredientActivity"
+            android:label="@string/title_activity_recipe"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.m68476521.mike.baking.fragments.RecipeDetailPagerFragment"/>
+        </activity>
+        <activity
+            android:name="com.m68476521.mike.baking.fragments.RecipeDetailPagerFragment"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.m68476521.mike.baking.activities.RecipeActivity"/>
+        </activity>
+
+        <provider
+            android:name="com.m68476521.mike.baking.data.TaskContentProvider"
+            android:authorities="com.m68476521.mike.baking"
+            android:exported="false"/>
+
+        <service android:name="com.m68476521.mike.baking.data.IngredientsService"/>
+
+        <service
+            android:name="com.m68476521.mike.baking.widget.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver android:name="com.m68476521.mike.baking.widget.IngredientAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/ingredient_app_widget_info"/>
+        </receiver>
+
+        <activity
+            android:name="com.m68476521.mike.baking.activities.StepActivity"
+            android:label="@string/title_activity_recipe"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>

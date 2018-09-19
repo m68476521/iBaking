@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">iBaking</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="ingredients_name">Ingredients</string>
+    <string name="title_activity_recipe">Recipe</string>
+    <string name="backdrop_title">Recipe name</string>
+    <string name="backdrop_subtitle">Ingredients and steps</string>
+    <string name="recipe_ingredients">Recipe Ingredients</string>
+    <string name="ingredients_subtitle">Ingredients List</string>
+    <string name="appwidget_text">Banking ingredients list:</string>
+    <string name="add_widget">Add widget</string>
+    <string name="image_desc">Image background</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="video_not_available">Video not available</string>
+    <string name="not_internet_connection">Something went wrong, please check your internet connection and try again!</string>
+</resources>
